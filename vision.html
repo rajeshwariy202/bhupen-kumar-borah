@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vision - Bhupen Kumar Borah</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuBtn = document.getElementById("menuBtn");
+        const mobileMenu = document.getElementById("mobileMenu");
+        const closeBtn = document.getElementById("closeBtn");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.remove("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-50">
+    <!-- Header -->
+    <header class="flex items-center justify-between px-6 py-4 bg-white shadow-md">
+      <div class="text-lg font-semibold text-gray-800">Bhupen Kumar Borah</div>
+
+      <button class="lg:hidden text-gray-700 focus:outline-none" id="menuBtn">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <nav class="hidden lg:flex space-x-6">
+        <a href="/index.html" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="/about.html" class="text-gray-700 hover:text-gray-900">About</a>
+        <a href="/vision.html" class="text-gray-700 hover:text-gray-900">Vision</a>
+        <a href="/contact-us.html" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        class="hidden fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center pt-20 space-y-6 z-50 lg:hidden"
+      >
+        <button id="closeBtn" class="absolute top-4 right-6 text-gray-700">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <a href="/index.html" class="text-gray-700 text-lg">Home</a>
+        <a href="/about.html" class="text-gray-700 text-lg">About</a>
+        <a href="/vision.html" class="text-gray-700 text-lg">Vision</a>
+        <a href="/contact-us.html" class="text-gray-700 text-lg">Contact Us</a>
+      </div>
+    </header>
+
+    <!-- Vision Section -->
+<main
+  class="relative px-6 py-24 text-center bg-gray-100 bg-cover bg-center min-h-[300px]"
+  style="background-image: url('/images/indian_flag.png');"
+>
+
+
+  <!-- Content container -->
+  <div class="relative p-6 rounded-md max-w-4xl mx-auto">
+    <h1 class="text-4xl font-bold text-gray-800 mb-4">Vision of Bhupen Kumar Borah</h1>
+    <p class="text-lg text-gray-700">
+      A vision of progress, sustainability, and opportunity for every citizen of Assam
+    </p>
+  </div>
+</main>
+
+
+
+
+    <!-- Footer -->
+   <footer class="bg-yellow-400 text-black py-16 min-h-[350px]">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-6">
+    <div>
+      <h2 class="font-bold text-xl mb-2">Bhupen Kumar Borah</h2>
+      <p>
+        Dedicated to public service, advocating for education, equity, and sustainable development.
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mb-2">Office Address</h2>
+      <p>
+        Rajiv Bhawan, Indira Gandhi Highway, G.S. Road, Guwahati – 781005, Assam
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mb-2">Contact Info</h2>
+      <p>Email: apccassam@gmail.com</p>
+      <p>Office: 0361-2450409</p>
+      <p>Mobile: 9717588022</p>
+    </div>
+  </div>
+
+  <div class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-8 px-4 sm:px-6 gap-4">
+    <div class="flex space-x-4">
+      <a href="#" class="text-blue-600 text-2xl"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" class="text-pink-500 text-2xl"><i class="fab fa-instagram"></i></a>
+      <a href="#" class="text-red-600 text-2xl"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <div class="text-center md:text-right">
+      <p>© 2025 Bhupen Kumar Borah. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+  </body>
+</html>

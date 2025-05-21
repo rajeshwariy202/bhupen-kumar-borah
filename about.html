@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Bhupen Kumar Borah</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
+    />
+  </head>
+  <body class="bg-white">
+    <header
+      class="flex items-center justify-between px-6 py-4 bg-white shadow-md"
+    >
+      <!-- Logo / Branding -->
+      <div class="text-lg font-semibold text-gray-800">Bhupen Kumar Borah</div>
+
+      <!-- Mobile Menu Button -->
+      <button class="lg:hidden text-gray-700 focus:outline-none" id="menuBtn">
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
+        </svg>
+      </button>
+
+      <!-- Nav Links (Desktop) -->
+      <nav class="hidden lg:flex space-x-6">
+        <a href="/index.html" class="text-gray-700 hover:text-gray-900">Home</a>
+        <a href="/about.html" class="text-gray-700 hover:text-gray-900"
+          >About</a
+        >
+        <a href="/vision.html" class="text-gray-700 hover:text-gray-900">Vision</a>
+        <a href="/contact-us.html" class="text-gray-700 hover:text-gray-900">Contact Us</a>
+      </nav>
+
+      <!-- Mobile Navigation -->
+      <div
+        id="mobileMenu"
+        class="hidden fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center pt-20 space-y-6 z-50 lg:hidden"
+      >
+        <button id="closeBtn" class="absolute top-4 right-6 text-gray-700">
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+        <a href="/index.html" class="text-gray-700 text-lg">Home</a>
+        <a href="/about.html" class="text-gray-700 text-lg">About</a>
+        <a href="/vision.html" class="text-gray-700 text-lg">Vision</a>
+        <a href="/contact-us.html" class="text-gray-700 text-lg">Contact Us</a>
+      </div>
+    </header>
+<div
+  class="relative overflow-hidden flex items-center justify-center min-h-[500px] bg-[#f7f7f7] bg-center bg-cover"
+  style="background-image: url('/images/indian_flag.png');"
+>
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0">
+    <div
+      class="w-full h-full bg-gradient-to-r from-orange-500 via-white to-green-500 opacity-70"
+    ></div>
+  </div>
+
+  <!-- Text Content -->
+  <div class="relative z-10 text-center px-4">
+    <h1 class="text-4xl font-bold text-black">
+      About Bhupen Kumar Borah
+    </h1>
+    <p class="mt-4 text-lg text-gray-800">
+      A journey of leadership, service, and the people of Assam.
+    </p>
+  </div>
+</div>
+
+
+  <section>
+  <div class="bg-yellow-400 py-6 text-center mt-20 mb-5">
+    <h1 class="text-4xl font-bold text-gray-800">His Roots, His Journey</h1>
+  </div>
+
+  <section
+    class="flex flex-col md:flex-row max-w-6xl mx-auto p-6 bg-white shadow-md"
+  >
+    <div class="w-full md:w-1/2">
+      <img
+        src="./images/image-slider9.jpeg"
+        alt="Bhupen Kumar Borah"
+        class="rounded-md shadow-md w-full h-72 md:h-96 object-cover"
+      />
+    </div>
+
+    <div class="w-full md:w-1/2 md:pl-6 text-center md:text-left mt-6 md:mt-0">
+      <p class="text-gray-700 mb-4 text-xl">
+        Born and raised in Pohumora, Assam, Bhupen Kumar Borah’s journey
+        began with grassroots activism during his student days. He served as
+        vice-president of his college student union and general secretary of
+        Dibrugarh University’s postgraduate students’ union, eventually
+        taking on leadership roles in the Youth Congress.
+      </p>
+      <blockquote class="text-orange-500 font-semibold mb-4 text-xl">
+        “My vision for Assam has always focused on building strong,
+        self-reliant villages and empowering youth to lead from the front.”
+      </blockquote>
+      <p class="text-gray-700 text-xl">
+        With a Master's degree in Political Science, Borah has been a vocal
+        advocate for rural development and local self-governance in Assam.
+        His leadership emphasizes empowering young people, strengthening
+        communities, and driving inclusive progress.
+      </p>
+    </div>
+  </section>
+</section>
+
+
+    <section>
+      <div class="bg-yellow-400 py-6 text-center mt-20 mb-5">
+        <h1 class="text-4xl font-bold text-gray-800">
+          Political Journey Timeline
+        </h1>
+      </div>
+
+      <div class="max-w-6xl mx-auto space-y-6">
+        <!-- 2023 -->
+        <div
+          class="border rounded-md shadow-sm bg-white"
+          x-data="{ open: true }"
+        >
+          <button
+            @click="open = !open"
+            class="w-full text-left px-6 py-4 flex justify-between items-center"
+          >
+            <span class="text-2xl"
+              ><span class="font-bold text-2xl">2023</span> - Continued Outreach
+              for Congress in Assam</span
+            >
+            <svg
+              :class="{'rotate-180': open}"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-collapse
+            class="px-6 pb-4 text-2xl text-gray-600"
+          >
+            Engaged in party outreach activities across the state, including the
+            <em>"Sutale Sutale Congress"</em> campaign to reconnect with
+            grassroots communities.
+          </div>
+        </div>
+
+        <!-- 2021 -->
+        <div
+          class="border rounded-md shadow-sm bg-white"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="w-full text-left px-6 py-4 flex justify-between items-center"
+          >
+            <span class="text-2xl"
+              ><span class="font-bold text-2xl">2021</span> - Appointed
+              President, Assam Pradesh Congress Committee</span
+            >
+            <svg
+              :class="{'rotate-180': open}"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-collapse
+            class="px-6 pb-4 text-2xl text-gray-600"
+          >
+            Became the president of Assam Pradesh Congress Committee to lead
+            organizational efforts in the state.
+          </div>
+        </div>
+
+        <!-- 2014 -->
+        <div
+          class="border rounded-md shadow-sm bg-white"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="w-full text-left px-6 py-4 flex justify-between items-center"
+          >
+            <span class="text-2xl"
+              ><span class="font-bold text-2xl">2014</span> - Contested Lok
+              Sabha Elections from Tezpur</span
+            >
+            <svg
+              :class="{'rotate-180': open}"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-collapse
+            class="px-6 pb-4 text-2xl text-gray-600"
+          >
+            Represented the party as a candidate for the Tezpur constituency in
+            the 2014 general elections.
+          </div>
+        </div>
+
+        <!-- 2006 -->
+        <div
+          class="border rounded-md shadow-sm bg-white"
+          x-data="{ open: false }"
+        >
+          <button
+            @click="open = !open"
+            class="w-full text-left px-6 py-4 flex justify-between items-center"
+          >
+            <span class="text-2xl"
+              ><span class="font-bold text-2xl">2006</span> - Elected Member of
+              the Assam Legislative Assembly (Bihpuria)</span
+            >
+            <svg
+              :class="{'rotate-180': open}"
+              class="w-5 h-5 transition-transform"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M19 9l-7 7-7-7"
+              ></path>
+            </svg>
+          </button>
+          <div
+            x-show="open"
+            x-collapse
+            class="px-6 pb-4 text-2xltext-2xl text-gray-600"
+          >
+            Elected as the MLA from Bihpuria, marking the beginning of a notable
+            political journey.
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center mt-8">
+        <button
+          class="text-black border border-black px-6 py-2 rounded transition hover:bg-gray-100"
+        >
+          See Full Timeline
+        </button>
+      </div>
+       </section>
+   <hr class="border-t border-gray-400 my-6">
+
+    <div class="flex flex-col items-center mt-20">
+      <div class="text-center my-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Connect With Us</h1>
+      </div>
+
+      <img
+        src="./images/connect3.jpeg"
+        alt=""
+        class="max-w-full h-auto rounded-lg p-6"
+      />
+    </div>
+
+    <div class="flex flex-col items-center mt-20">
+      <div class="text-center my-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">
+          Stay Updated via Messages
+        </h1>
+      </div>
+
+      <img
+        src="./images/connect4.jpeg"
+        alt=""
+        class="max-w-full h-auto rounded-lg p-6"
+      />
+    </div>
+    <section>
+         <div class="bg-yellow-400 py-6 text-center mt-20 mb-5">
+        <h1 class="text-4xl font-bold text-gray-800">
+          People's Corner 
+        </h1>
+      </div>
+  
+<div class="flex justify-center items-center min-h-screen bg-gray-100">
+  <div class="relative w-full max-w-6xl overflow-hidden rounded-lg shadow-lg">
+    <!-- Image Wrapper -->
+    <div class="flex transition-transform duration-700 ease-in-out" id="slider">
+  <img src="./images/gamosa.jpeg" class="w-full h-[42rem] object-cover flex-shrink-0" />
+  <img src="./images/gamosa2.png" class="w-full h-[42rem] object-cover flex-shrink-0" />
+</div>
+
+
+    <!-- Prev Button -->
+    <button
+      onclick="prevSlide()"
+      class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <!-- Next Button -->
+    <button
+      onclick="nextSlide()"
+      class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition"
+    >
+      <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+  </div>
+</div>
+  </section>
+<section>
+     <div class="flex flex-col items-center mt-20">
+      <div class="text-center my-8">
+        <h1 class="text-4xl font-bold text-gray-900 mb-4">Be a Part of the Fan Club </h1>
+      </div>
+
+      <img
+        src="./images/fan-club.png"
+        alt=""
+        class="max-w-full h-auto rounded-lg p-6"
+      />
+    </div>
+</section>
+
+ <footer class="bg-yellow-400 text-black py-16">
+  <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-6">
+    <div>
+      <h2 class="font-bold text-xl mb-2">Bhupen Kumar Borah</h2>
+      <p>
+        Dedicated to public service, advocating for education, equity, and
+        sustainable development.
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mb-2">Office Address</h2>
+      <p>
+        Rajiv Bhawan, Indira Gandhi Highway, G.S. Road, Guwahati – 781005,
+        Assam
+      </p>
+    </div>
+    <div>
+      <h2 class="font-bold text-xl mb-2">Contact Info</h2>
+      <p>Email: apccassam@gmail.com</p>
+      <p>Office: 0361-2450409</p>
+      <p>Mobile: 9717588022</p>
+    </div>
+  </div>
+
+  <div
+    class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-8 px-4 sm:px-6 gap-4"
+  >
+    <div class="flex space-x-4">
+      <a href="#" class="text-blue-600 text-2xl"
+        ><i class="fab fa-facebook-f"></i
+      ></a>
+      <a href="#" class="text-pink-500 text-2xl"
+        ><i class="fab fa-instagram"></i
+      ></a>
+      <a href="#" class="text-red-600 text-2xl"
+        ><i class="fab fa-youtube"></i
+      ></a>
+    </div>
+
+    <div class="text-center md:text-right">
+      <p>© 2025 Bhupen Kumar Borah. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+   
+    <script src="script.js"></script>
+  </body>
+</html>
