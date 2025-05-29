@@ -9,21 +9,30 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v6.1.1/css/all.css"
     />
-    <link rel="stylesheet" href="styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header
+
+    <style>
+       body {
+    font-family: 'Inter', sans-serif;
+  }
+
+   .mobile-menu-transition {
+        transition: height 0.3s ease-out, opacity 0.3s ease-out;
+        overflow: hidden; /* Hide overflowing content during transition */
+      }
+
+      
+    </style>
+   <header
       class="max-w-7xl mx-auto flex items-center justify-between px-6 py-4 bg-white shadow-md"
     >
       <div class="text-2xl font-bold text-gray-800">Bhupen Kumar Borah</div>
 
       <button class="lg:hidden text-gray-700 focus:outline-none" id="menuBtn">
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
@@ -42,7 +51,7 @@
         <a
           href="/about.html"
           class="text-lg text-gray-700 font-semibold hover:text-gray-900"
-          >About</a
+          >About Us</a
         >
         <a
           href="/vision.html"
@@ -55,150 +64,95 @@
           >Contact Us</a
         >
       </nav>
-
-      <div
-        id="mobileMenu"
-        class="hidden fixed top-0 left-0 w-full h-full bg-white flex flex-col items-center pt-20 space-y-6 z-50 lg:hidden"
-      >
-        <button id="closeBtn" class="absolute top-4 right-6 text-gray-700">
-          <svg
-            class="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M6 18L18 6M6 6l12 12"
-            ></path>
-          </svg>
-        </button>
-        <a href="/index.html" class="text-gray-700 text-lg">Home</a>
-        <a href="/about.html" class="text-gray-700 text-lg">About</a>
-        <a href="/vision.html" class="text-gray-700 text-lg">Vision</a>
-        <a href="contact-us.html" class="text-gray-700 text-lg">Contact Us</a>
-      </div>
     </header>
-    <!-- hero section  -->
-    <section
-      class="relative flex flex-col md:flex-row items-center text-left py-16 overflow-hidden bg-cover bg-center flex"
+
+    <div
+      id="mobileMenu"
+      class="hidden lg:hidden w-full bg-white flex flex-col items-center py-6 space-y-4 shadow-md mobile-menu-transition"
+      style="height: 0; opacity: 0;"
     >
-      <div
-        class="absolute inset-0 hidden sm:block bg-gradient-to-b from-orange-400 via-white to-green-500 opacity-60 z-0"
-      ></div>
-
-      <div
-        class="relative z-10 max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6"
-      >
-        <div class="max-w-2xl md:w-1/2">
-          <h1 class="font-bold leading-tight">
-            <span class="text-black text-7xl"
-              >A <span class="text-orange-700 font-bold text-7xl">STRONG</span>
-            </span>
-            <br />
-
-            <span class="text-black font-bold text-4xl">UNWAVERING VOICE</span>
-          </h1>
-          <p class="text-3xl md:text-4xl font-semibold mb-8 mt-4">
-            for the People of Assam
-          </p>
-          <p class="text-gray-700 text-lg md:text-xl mb-6">
-            Bhupen Kumar Borah has worked closely with the people of Assam,
-            earning trust through honest leadership and action.
-          </p>
-          <div>
-            <a
-              href="#"
-              class="w-56 px-4 py-3 md:w-64 md:px-6 md:py-4 bg-blue-900 text-white text-base font-medium rounded-md hover:bg-yellow-600 flex items-center"
-            >
-              KNOW HIS JOURNEY
-              <svg
-                class="w-5 h-5 ml-2"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M9 5l7 7-7 7"
-                ></path>
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <div
-          class="w-full md:w-full flex justify-center mt-10 md:mt-0 hidden sm:flex"
-        >
-          <img
-            src="./images/bhupen_hero2.png"
-            alt="Bhupen Kumar Borah"
-            class="w-[18rem] sm:w-[26rem] md:w-[34rem] lg:w-[48rem] xl:w-[64rem] 2xl:w-[80rem] h-auto"
-          />
-        </div>
-      </div>
-    </section>
-
-    <!-- <section
-  class="relative flex flex-col md:flex-row items-center text-left px-6 py-16 overflow-hidden mx-auto max-w-8xl bg-[url('/images/indian_flag.png')] bg-cover bg-center"
->
-
-  <div class="absolute inset-0 bg-gradient-to-r from-orange-500 via-white to-green-500 opacity-60"></div>
-
-
-  <div class="relative z-10 w-full md:w-1/2 max-w-2xl">
-    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-      <span class="text-black">A </span>
-      <span class="text-orange-500 font-bold">STRONG</span><br />
-      <span class="text-gray-900">UNWAVERING VOICE</span>
-    </h1>
-    <p class="text-2xl md:text-3xl lg:text-4xl font-semibold mb-6 mt-4">
-      for the People of Assam
-    </p>
-    <p class="text-gray-700 text-base md:text-lg lg:text-xl mb-6">
-      Bhupen Kumar Borah has worked closely with the people of Assam,
-      earning trust through honest leadership and action.
-    </p>
-    <div>
-      <a
-        href="#"
-        class="w-full md:w-64 px-6 py-4 bg-yellow-500 text-white text-base font-medium rounded-md hover:bg-yellow-600 flex items-center justify-center"
-      >
-        KNOW HIS JOURNEY
-        <svg
-          class="w-5 h-5 ml-2"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
+      <button id="closeBtn" class="absolute top-4 right-6 text-gray-700 hidden">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path
             stroke-linecap="round"
             stroke-linejoin="round"
             stroke-width="2"
-            d="M9 5l7 7-7 7"
+            d="M6 18L18 6M6 6l12 12"
           ></path>
         </svg>
+      </button>
+      <a href="/index.html" class="text-gray-700 text-lg">Home</a>
+      <a href="/about.html" class="text-gray-700 text-lg">About Us</a>
+      <a href="/vision.html" class="text-gray-700 text-lg">Vision</a>
+      <a href="contact-us.html" class="text-gray-700 text-lg">Contact Us</a>
+    </div>
+<section
+  class="relative flex flex-col items-center text-center py-16 overflow-hidden bg-cover bg-center"
+>
+  <!-- Background gradient visible on all screens -->
+  <div
+    class="absolute inset-0 block bg-gradient-to-b from-orange-400 via-white to-green-500 opacity-60 z-0"
+  ></div>
+
+  <div
+    class="relative z-10 max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between px-6"
+  >
+   <div class="text-center max-w-3xl px-4 z-10">
+  <!-- First Line: A STRONG -->
+<div class="flex justify-center items-baseline flex-nowrap font-black leading-tight tracking-[-0.06em]">
+  <span class="italic font-light text-black text-[32px] xs:text-[40px] sm:text-[56px] md:text-[92px] mr-4">
+    A
+  </span>
+  <span class="text-[#F95B10] text-[40px] xs:text-[48px] sm:text-[64px] md:text-[92px]">
+    STRONG
+  </span>
+</div>
+
+<div class="flex justify-center whitespace-nowrap mt-2">
+  <p class="text-[#121212] text-[24px] xs:text-[28px] sm:text-[36px] md:text-[48px] font-semibold">
+    UNWAVERING VOICE
+  </p>
+</div>
+
+    <!-- Third Line: for the People of Assam -->
+    <p class="text-black text-xl xs:text-2xl sm:text-3xl md:text-4xl font-medium mt-2">
+      for the People of Assam
+    </p>
+
+    <!-- Description -->
+    <p class="text-gray-700 text-base xs:text-lg sm:text-xl mt-4 leading-relaxed">
+      Bhupen Kumar Borah has worked closely with the people of Assam,<br />
+      earning trust through honest leadership and action
+    </p>
+
+    <!-- CTA Button -->
+    <div class="mt-8">
+      <a href="#"
+        class="inline-flex items-center px-6 py-3 bg-[#0D134D] text-white text-base font-medium rounded-md hover:bg-yellow-600 transition">
+        Know your Journey
+        <svg class="w-5 h-5 ml-2 text-white" viewBox="0 0 20 20" fill="currentColor">
+  <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+</svg>
       </a>
     </div>
   </div>
 
- 
-  <div class="relative z-10 w-full md:w-1/2 flex justify-center mt-10 md:mt-0">
-    <img
-      src="./images/bhupen_hero1.png"
-      alt="Bhupen Kumar Borah"
-      class="w-[20rem] sm:w-[28rem] md:w-[36rem] lg:w-[44rem] xl:w-[60rem] 2xl:w-[80rem] h-auto"
-    />
+    <div class="w-full flex justify-center mt-10 md:mt-0 items-end -mb-16">
+      <img
+        src="./images/bhupen_hero2.png"
+        alt="Bhupen Kumar Borah"
+        class="w-[16rem] xs:w-[20rem] sm:w-[26rem] md:w-[34rem] lg:w-[48rem] xl:w-[64rem] 2xl:w-[80rem] h-auto align-bottom"
+      />
+    </div>
   </div>
-</section> -->
+</section>
 
+
+
+ 
     <!-- ################################ -->
 
-    <section class="bg-blue-900 text-white py-12">
+    <section class="bg-[#0D134D] text-white py-12">
       <div
         class="max-w-7xl mx-auto flex flex-col md:flex-row justify-around items-center space-y-10 md:space-y-0"
       >
@@ -242,148 +196,149 @@
 
     <!-- image slider  -->
 
-    <section class="relative w-screen mx-auto overflow-hidden">
-      <div class="bg-yellow-400 py-6 text-center mt-20 mb-5">
+<section class="relative w-screen mx-auto overflow-hidden">
+    <div class="bg-yellow-400 py-6 text-center mt-20 mb-5">
         <h1 class="text-4xl font-bold text-gray-800">Recent Activities</h1>
-      </div>
+    </div>
 
-      <div
-        class="relative overflow-hidden max-w-6xl mx-auto rounded-lg shadow-lg"
-      >
+    <div
+        class="relative max-w-screen-xl mx-auto rounded-lg shadow-lg"
+        style="overflow: visible;"
+    >
         <div
-          class="flex transition-transform duration-500 ease-in-out w-full"
-          id="slider"
+            class="flex transition-transform duration-500 ease-in-out py-4 items-center gap-x-6"
+            id="slider"
         >
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider1.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Addressing Education Reform in Rural Assam"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">in Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">July 10, 2029</p>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-slider3.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Event Title 6 (Clone 1)" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Event Title 6</p>
+                    <p class="text-sm text-gray-300">Location 6</p>
+                    <p class="text-xs text-gray-400 mt-1">Date 6</p>
+                </div>
             </div>
-          </div>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-slider2.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Event Title 5 (Clone 2)" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Event Title 5</p>
+                    <p class="text-sm text-gray-300">Location 5</p>
+                    <p class="text-xs text-gray-400 mt-1">Date 5</p>
+                </div>
+            </div>
 
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider2.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Community Outreach Program"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">August 5, 2029</p>
-            </div>
-          </div>
 
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider3.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Inauguration of New Infrastructure Project"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">September 1, 2029</p>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-gallery4.JPG" class="w-full h-[700px] object-cover rounded-lg" alt="Assam Pradesh Congress Committee, Mantu Ram Pawar" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2029</p>
+                </div>
             </div>
-          </div>
 
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider4.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Meeting with Local Business Leaders"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">October 15, 2029</p>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-gallery5.png" class="w-full h-[700px] object-cover rounded-lg" alt="Assam Pradesh Congress Committee, Mantu Ram Pawar" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2043</p>
+                </div>
             </div>
-          </div>
 
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider5.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Visiting Flood-Affected Areas"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">November 2, 2029</p>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-gallery6.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Assam Pradesh Congress Committee, Mantu Ram Pawar" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2045</p>
+                </div>
             </div>
-          </div>
 
-          <div class="flex-shrink-0 w-full relative">
-            <img
-              src="./images/image-slider6.jpeg"
-              class="w-full h-[500px] object-cover"
-              alt="Interacting with Youth Groups"
-            />
-            <div
-              class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4"
-            >
-              <p class="text-lg font-semibold">Addressing Education Reform</p>
-              <p class="text-sm text-gray-300">Rural Assam</p>
-              <p class="text-xs text-gray-400 mt-1">December 8, 2029</p>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-slider5.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Noufal Al-Wardi" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2045</p>
+                </div>
             </div>
-          </div>
+
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-slider2.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Placeholder Image 5" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Event Title 5</p>
+                    <p class="text-sm text-gray-300">Location 5</p>
+                    <p class="text-xs text-gray-400 mt-1">Date 5</p>
+                </div>
+            </div>
+             <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-slider3.jpeg" class="w-full h-[700px] object-cover rounded-lg" alt="Placeholder Image 6" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Event Title 6</p>
+                    <p class="text-sm text-gray-300">Location 6</p>
+                    <p class="text-xs text-gray-400 mt-1">Date 6</p>
+                </div>
+            </div>
+
+
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-gallery4.JPG" class="w-full h-[700px] object-cover rounded-lg" alt="Assam Pradesh Congress Committee, Mantu Ram Pawar (Clone 1)" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2029</p>
+                </div>
+            </div>
+            <div class="flex-shrink-0 relative w-full sm:w-5/6 md:w-2/3 lg:w-1/2 xl:w-2/5">
+                <img src="./images/image-gallery5.png" class="w-full h-[700px] object-cover rounded-lg" alt="Assam Pradesh Congress Committee, Mantu Ram Pawar (Clone 2)" />
+                <div class="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4 rounded-b-lg">
+                    <p class="text-lg font-semibold">Addressing Education Reform</p>
+                    <p class="text-sm text-gray-300">in Rural Assam</p>
+                    <p class="text-xs text-gray-400 mt-1">July 10, 2043</p>
+                </div>
+            </div>
+
         </div>
 
         <button
-          onclick="prevSlide()"
-          class="absolute top-1/2 left-3 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition z-10"
+            onclick="prevSlide()"
+            class="absolute top-1/2 left-0 sm:left-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition z-10"
         >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M15 19l-7-7 7-7"
-            />
-          </svg>
+            <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M15 19l-7-7 7-7"
+                />
+            </svg>
         </button>
 
         <button
-          onclick="nextSlide()"
-          class="absolute top-1/2 right-3 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition z-10"
+            onclick="nextSlide()"
+            class="absolute top-1/2 right-0 sm:right-4 transform -translate-y-1/2 bg-gray-700 text-white p-3 rounded-full shadow-lg hover:bg-gray-800 transition z-10"
         >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M9 5l7 7-7 7"
-            />
-          </svg>
+            <svg
+                class="w-5 h-5"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 5l7 7-7 7"
+                />
+            </svg>
         </button>
-      </div>
-    </section>
+    </div>
+</section>
 
     <section class="bg-gray-100">
       <div class="bg-yellow-400 py-6 text-center mt-20">
@@ -467,7 +422,7 @@
         >
           <div class="col-span-1">
             <img
-              src="./images/image-gallery1.jpeg"
+              src="./images/image-gallery1.png"
               alt="Speaker in a microphone"
               class="w-full h-72 md:h-[340px] rounded-lg object-cover"
             />
@@ -483,7 +438,7 @@
 
           <div class="col-span-1">
             <img
-              src="./images/image-gallery3.jpeg.png"
+              src="./images/image-gallery3.png"
               alt="Formal meeting"
               class="w-full h-72 md:h-[340px] rounded-lg object-cover"
             />
@@ -499,7 +454,7 @@
 
           <div class="col-span-1">
             <img
-              src="./images/image-gallery5.jpeg"
+              src="./images/image-gallery5.png"
               alt="Public address"
               class="w-full h-72 md:h-[340px] rounded-lg object-cover"
             />
@@ -690,9 +645,9 @@
     </div>
   </div>
 </section>
-    <footer class="bg-yellow-400 text-black py-8">
+    <footer class="bg-yellow-400 text-black py-16 mt-20">
       <div
-        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-6"
+        class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4 sm:px-6 max-w-7xl"
       >
         <div>
           <h2 class="font-bold text-xl mb-2">Bhupen Kumar Borah</h2>
@@ -717,7 +672,7 @@
       </div>
 
       <div
-        class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-8 px-4 sm:px-6 gap-4"
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center mt-8 px-4 sm:px-6 gap-4 max-w-7xl"
       >
         <div class="flex space-x-4">
           <a href="#" class="text-blue-600 text-2xl"
@@ -731,7 +686,7 @@
           ></a>
         </div>
 
-        <div class="text-center md:text-right">
+        <div class="text-center md:text-right mr-10">
           <p>© 2025 Bhupen Kumar Borah. All rights reserved.</p>
         </div>
       </div>
